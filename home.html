@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel='stylesheet' href='homestyle.css'>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <title>Crossing Home</title>
+   </head>
+<body>
+  <div class="sidebar">
+    
+    <div class="logo-details">
+      
+      <img src="logo.png" alt="Cross It Off" width=30% height=100%>
+      <div class="logo_name">Crossing Menu</div>
+    
+      <i class='bx bx-menu' id="btn" ></i>
+    </div>
+  
+    <ul class="nav-list">
+      <li>
+        <a href="cross it off/index.html">
+          <i class='fa fa-plus' ></i>
+          <span class="links_name">Start Crossing</span>
+        </a>
+        <span class="tooltip">Start Crossing</span>
+      </li>
+      <li>
+       <a href="index.html">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">New User</span>
+       </a>
+       <span class="tooltip">New User</span>
+     </li>
+     <li>
+       <a href="about.html">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">About Us</span>
+       </a>
+       <span class="tooltip">About Us</span>
+     </li>
+     
+     
+
+     <li class="profile">
+         <div class="profile-details">
+           <div class="name_job">Welcome
+             <div id="text" class="name"></div>
+
+          </div>
+         </div>
+         
+         <a href="index.html"><i class='bx bx-log-out' id="log_out" ></i></a>
+     </li>
+    </ul>
+  </div>
+  <div class="home-section">
+      <div class="text"><span id="time"></span><span id="ampm"></span>
+      <p id="greet"></p>
+      </div>
+  </div>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+  <script src="home.js"></script>
+</body>
+</html>
